@@ -1,0 +1,8 @@
+{
+  "java": [
+    "1/PracticaGuiada/build.xml",
+    "2/FigurasGeometricas/build.xml",
+    "3/Arreglos/build.xml",
+    "4/Menu_Ciclos/build.xml"
+  ]
+}
