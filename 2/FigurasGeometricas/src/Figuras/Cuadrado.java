@@ -24,14 +24,14 @@ public class Cuadrado extends figurasgeometricas.ClaseFigurasGeometricas {
      * @return lal*4
      */
         public float Perimetro(){
-        return this.lal*4;
+        return (float) this.lal*4;
     }  
     /**
      * Area method to calculate the area of a square shape
      * @return lal*2
      */
     public float Area(){
-        return lal*2;
+        return (float) lal * (float) lal;
     }
      //Método toString:
     /**

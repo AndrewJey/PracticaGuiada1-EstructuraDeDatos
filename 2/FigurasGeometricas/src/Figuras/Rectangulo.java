@@ -25,14 +25,14 @@ public class Rectangulo extends figurasgeometricas.ClaseFigurasGeometricas {
      * @return (lal*2)+(lab*2)
      */
         public float Perimetro(){
-        return ((this.lal*2)+(this.lab*2));
+        return (((float) this.lal*2)+((float) this.lab*2));
     }  
     /**
      * Area method to calculate the area of a rectangule shape
      * @return lal*lab
      */
     public float Area(){
-        return this.lal*this.lab;
+        return (float) this.lal*(float) this.lab;
     }
      //Método toString:
     /**

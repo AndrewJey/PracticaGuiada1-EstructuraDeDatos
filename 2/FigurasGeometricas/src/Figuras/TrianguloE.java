@@ -15,10 +15,10 @@ public class TrianguloE extends figurasgeometricas.ClaseFigurasGeometricas {
         super(lal, lab);
     }
     public float Perimetro() {
-        return this.lal * 3;
+        return (float) this.lal * 3;
     }
     public float Area() {
-        return lal*lab/2;
+        return (float) lal*(float) lab/2;
     }
     @Override 
     public String toString() {

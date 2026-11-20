@@ -10,7 +10,7 @@ Puedes abrir este repositorio en VS Code, Antigravity o Sublime Text. El compila
 En NetBeans 25, abre la carpeta que contiene `build.xml` como proyecto Ant. Selecciona un JDK igual o posterior al nivel de fuente del proyecto; las compilaciones de esta revisión usan JDK 24.0.2. El asistente busca NetBeans y el JDK y mantiene la configuración de usuario en `.local-build/`.
 
 ```powershell
-.uild-local.ps1
+..\build-local.ps1
 .\build-local.ps1 -Project '1/PracticaGuiada/build.xml' -Target run
 ```
 
@@ -22,12 +22,20 @@ Inventario y compilaciones locales del 2026-11-15. Una compilación correcta no 
 
 | Componente | Tipo / destino | Validación |
 | --- | --- | --- |
-| [1/PracticaGuiada/build.xml](<1/PracticaGuiada/build.xml>) | netbeans-ant / 1.8 | Compila; prueba funcional pendiente |
-| [2/FigurasGeometricas/build.xml](<2/FigurasGeometricas/build.xml>) | netbeans-ant / 1.8 | Compila; prueba funcional pendiente |
-| [3/Arreglos/build.xml](<3/Arreglos/build.xml>) | netbeans-ant / 1.8 | Compila; prueba funcional pendiente |
-| [4/Menu_Ciclos/build.xml](<4/Menu_Ciclos/build.xml>) | netbeans-ant / 1.8 | Compila; prueba funcional pendiente |
+| [1/PracticaGuiada/build.xml](<1/PracticaGuiada/build.xml>) | netbeans-ant / 1.8 | Compila y pasa verificación funcional (`checks/`) |
+| [2/FigurasGeometricas/build.xml](<2/FigurasGeometricas/build.xml>) | netbeans-ant / 1.8 | Compila y pasa verificación funcional (`checks/`) |
+| [3/Arreglos/build.xml](<3/Arreglos/build.xml>) | netbeans-ant / 1.8 | Compila y pasa verificación funcional (`checks/`) |
+| [4/Menu_Ciclos/build.xml](<4/Menu_Ciclos/build.xml>) | netbeans-ant / 1.8 | Compila y pasa verificación funcional (`checks/`) |
 
 ## Archivos ignorados
 
 `.gitignore` excluye credenciales locales, estado del editor y salidas de las herramientas detectadas. No deja de versionar archivos que ya estaban en Git. Los manifiestos, archivos de bloqueo, recursos fuente y scripts de esquema forman parte del código.
 <!-- local-development:end -->
+
+<!-- improvements-20261119:start -->
+## Mejoras y verificación funcional (2026-11-19)
+
+- **Mejoras aplicadas:** Corregidos cálculos geométricos con aritmética flotante (área de triángulo con decimales y prevención de overflow en cuadrado/rectángulo) y `Condicionales` sin efectos secundarios.
+- **Pruebas ejecutadas:** StructureGeometryCheck (4 aserciones).
+- **Definición de comprobaciones:** [`checks/projects.json`](checks/projects.json) (ejecutable tras compilar con `.\build-local.ps1`).
+<!-- improvements-20261119:end -->

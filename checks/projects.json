@@ -1,0 +1,9 @@
+[
+  {
+    "project": "2/FigurasGeometricas/build.xml",
+    "source": "checks/StructureGeometryCheck.java",
+    "main": "StructureGeometryCheck",
+    "headless": true,
+    "classpath": []
+  }
+]
